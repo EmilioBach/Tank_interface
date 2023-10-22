@@ -98,6 +98,7 @@ namespace tank_interface
             button_a.Enabled = false;
             button_d.Enabled = false;
             reloadF.Enabled = false;
+            trackbar.Enabled = false;
 
             addconfiguration.Value = 0;
 
@@ -126,6 +127,7 @@ namespace tank_interface
                 button_a.Enabled = true;
                 button_d.Enabled = true;
                 reloadF.Enabled = true;
+                trackbar.Enabled = true;
 
             }
             catch(Exception ex) 

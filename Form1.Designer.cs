@@ -51,10 +51,14 @@
             this.addconfiguration = new System.Windows.Forms.ProgressBar();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.show_seconds = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.fire_2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.trackbar = new System.Windows.Forms.TrackBar();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.Control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.night_mode)).BeginInit();
             this.panel1.SuspendLayout();
@@ -64,6 +68,10 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackbar)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // Control
@@ -218,6 +226,7 @@
             // 
             // addconfiguration
             // 
+            this.addconfiguration.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.addconfiguration.ForeColor = System.Drawing.Color.DarkSlateGray;
             resources.ApplyResources(this.addconfiguration, "addconfiguration");
             this.addconfiguration.Name = "addconfiguration";
@@ -232,25 +241,24 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.show_seconds);
             this.groupBox3.Controls.Add(this.fire_2);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.show_seconds);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
             // show_seconds
             // 
             resources.ApplyResources(this.show_seconds, "show_seconds");
             this.show_seconds.Name = "show_seconds";
-            // 
-            // fire_2
-            // 
-            this.fire_2.BackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.fire_2, "fire_2");
-            this.fire_2.Name = "fire_2";
-            this.fire_2.UseVisualStyleBackColor = false;
-            this.fire_2.Click += new System.EventHandler(this.fire_2_Click);
             // 
             // button1
             // 
@@ -260,12 +268,41 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // fire_2
+            // 
+            this.fire_2.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.fire_2, "fire_2");
+            this.fire_2.Name = "fire_2";
+            this.fire_2.UseVisualStyleBackColor = false;
+            this.fire_2.Click += new System.EventHandler(this.fire_2_Click);
+            // 
+            // trackbar
+            // 
+            this.trackbar.LargeChange = 1;
+            resources.ApplyResources(this.trackbar, "trackbar");
+            this.trackbar.Name = "trackbar";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel5.Controls.Add(this.groupBox5);
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.trackbar);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -287,7 +324,12 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackbar)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -318,6 +360,10 @@
         private System.Windows.Forms.Button fire_2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TrackBar trackbar;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }
 
