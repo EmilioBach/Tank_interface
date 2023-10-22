@@ -218,6 +218,27 @@ namespace tank_interface
             arduino_interface.WriteLine("$Fire_2");
         }
 
+        private void trackbar_Scroll(object sender, EventArgs e)
+        {
+            labelInfo.Text = trackbar.Value + "0º";
+            arduino_interface.WriteLine($"$S{labelInfo.Text}");
+        }
+
+        private void led_red_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void led_green_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void led_blue_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         //temporizador
     }
 }

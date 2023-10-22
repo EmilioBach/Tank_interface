@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Control = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.button_d = new System.Windows.Forms.Button();
             this.button_a = new System.Windows.Forms.Button();
-            this.night_mode = new System.Windows.Forms.PictureBox();
             this.reloadF = new System.Windows.Forms.Button();
             this.arduino_interface = new System.IO.Ports.SerialPort(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -59,8 +59,15 @@
             this.trackbar = new System.Windows.Forms.TrackBar();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.labelInfo = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.led_red = new System.Windows.Forms.CheckBox();
+            this.led_green = new System.Windows.Forms.CheckBox();
+            this.led_blue = new System.Windows.Forms.CheckBox();
             this.Control.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.night_mode)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -72,16 +79,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackbar)).BeginInit();
             this.panel5.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // Control
             // 
             resources.ApplyResources(this.Control, "Control");
+            this.Control.Controls.Add(this.label6);
             this.Control.Controls.Add(this.button_d);
             this.Control.Controls.Add(this.button_a);
             this.Control.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Control.Name = "Control";
             this.Control.TabStop = false;
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
             // 
             // button_d
             // 
@@ -98,14 +112,6 @@
             this.button_a.Name = "button_a";
             this.button_a.UseVisualStyleBackColor = false;
             this.button_a.Click += new System.EventHandler(this.Button_a_Click);
-            // 
-            // night_mode
-            // 
-            this.night_mode.Image = global::tank_interface.Properties.Resources.night_mode;
-            resources.ApplyResources(this.night_mode, "night_mode");
-            this.night_mode.Name = "night_mode";
-            this.night_mode.TabStop = false;
-            this.night_mode.Click += new System.EventHandler(this.Night_mode_Click);
             // 
             // reloadF
             // 
@@ -280,7 +286,9 @@
             // 
             this.trackbar.LargeChange = 1;
             resources.ApplyResources(this.trackbar, "trackbar");
+            this.trackbar.Maximum = 18;
             this.trackbar.Name = "trackbar";
+            this.trackbar.Scroll += new System.EventHandler(this.trackbar_Scroll);
             // 
             // panel5
             // 
@@ -291,10 +299,64 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.labelInfo);
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Controls.Add(this.label4);
+            this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.trackbar);
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
+            // 
+            // labelInfo
+            // 
+            resources.ApplyResources(this.labelInfo, "labelInfo");
+            this.labelInfo.Name = "labelInfo";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel6.Controls.Add(this.led_blue);
+            this.panel6.Controls.Add(this.led_green);
+            this.panel6.Controls.Add(this.led_red);
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
+            // led_red
+            // 
+            resources.ApplyResources(this.led_red, "led_red");
+            this.led_red.Name = "led_red";
+            this.led_red.UseVisualStyleBackColor = true;
+            this.led_red.CheckedChanged += new System.EventHandler(this.led_red_CheckedChanged);
+            // 
+            // led_green
+            // 
+            resources.ApplyResources(this.led_green, "led_green");
+            this.led_green.Name = "led_green";
+            this.led_green.UseVisualStyleBackColor = true;
+            this.led_green.CheckedChanged += new System.EventHandler(this.led_green_CheckedChanged);
+            // 
+            // led_blue
+            // 
+            resources.ApplyResources(this.led_blue, "led_blue");
+            this.led_blue.Name = "led_blue";
+            this.led_blue.UseVisualStyleBackColor = true;
+            this.led_blue.CheckedChanged += new System.EventHandler(this.led_blue_CheckedChanged);
             // 
             // Form1
             // 
@@ -302,12 +364,12 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.night_mode);
             this.KeyPreview = true;
             this.Name = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
@@ -315,7 +377,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.Control.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.night_mode)).EndInit();
+            this.Control.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -330,12 +392,13 @@
             this.panel5.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox night_mode;
         private System.Windows.Forms.GroupBox Control;
         private System.Windows.Forms.Button reloadF;
         private System.Windows.Forms.Label label1;
@@ -364,6 +427,15 @@
         private System.Windows.Forms.TrackBar trackbar;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelInfo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.CheckBox led_green;
+        private System.Windows.Forms.CheckBox led_red;
+        private System.Windows.Forms.CheckBox led_blue;
     }
 }
 
