@@ -181,5 +181,24 @@ namespace tank_interface
                 reloadF.PerformClick();
             }
         }
+        //machine gun
+        int milisegundos = 5;
+        private void fire_2_Click(object sender, EventArgs e)
+        {
+            arduino_interface.WriteLine("$Fire_2"); //new command!
+            show_seconds.Text = milisegundos.ToString();
+            timer1.Start();
+
+        }
+
+        //temporizador
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            milisegundos -= 1;
+            if (show_seconds.Text == "0")
+            {
+                timer1.Stop();
+            }
+        }
     }
 }
