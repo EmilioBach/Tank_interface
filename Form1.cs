@@ -90,6 +90,15 @@ namespace tank_interface
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //disable leds
+            buttonred.Image = Properties.Resources.redledoff;
+            buttongreen.Image = Properties.Resources.redledoff;
+            buttonblue.Image = Properties.Resources.redledoff;
+
+            led_red.Enabled = false;
+            led_green.Enabled = false;
+            led_blue.Enabled = false;
+
             openport.Enabled = true;
             closeport.Enabled = true;
 
@@ -116,6 +125,10 @@ namespace tank_interface
                 arduino_interface.PortName = portname.Text;
                 arduino_interface.BaudRate = Convert.ToInt32(baudrate.Text);
                 arduino_interface.Open();
+
+                led_red.Enabled = true;
+                led_green.Enabled = true;
+                led_blue.Enabled = true;
 
                 openport.Enabled = false;
                 closeport.Enabled = true;
@@ -217,28 +230,54 @@ namespace tank_interface
             timer1.Start();
             arduino_interface.WriteLine("$Fire_2");
         }
-
+        //turret
         private void trackbar_Scroll(object sender, EventArgs e)
         {
             labelInfo.Text = trackbar.Value + "0º";
             arduino_interface.WriteLine($"$S{labelInfo.Text}");
         }
+        //turret
 
+        //leds
         private void led_red_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (led_red.Checked) 
+            { 
+                buttonred.Image = Properties.Resources.redledon; 
+            }
+            else
+            {
+                buttonred.Image = Properties.Resources.redledoff;
+            }
         }
 
         private void led_green_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (led_green.Checked)
+            {
+                buttongreen.Image = Properties.Resources.buttongreen;
+            }
+            else
+            {
+                buttongreen.Image= Properties.Resources.redledoff;
+            }
         }
 
         private void led_blue_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (led_blue.Checked)
+            {
+                buttonblue.Image = Properties.Resources.Circle_34541;
+            }
+            else
+            {
+                buttonblue.Image = Properties.Resources.redledoff;
+            }
         }
 
-        //temporizador
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

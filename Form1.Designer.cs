@@ -64,9 +64,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.led_red = new System.Windows.Forms.CheckBox();
-            this.led_green = new System.Windows.Forms.CheckBox();
+            this.buttonblue = new System.Windows.Forms.PictureBox();
+            this.buttongreen = new System.Windows.Forms.PictureBox();
+            this.buttonred = new System.Windows.Forms.PictureBox();
             this.led_blue = new System.Windows.Forms.CheckBox();
+            this.led_green = new System.Windows.Forms.CheckBox();
+            this.led_red = new System.Windows.Forms.CheckBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label8 = new System.Windows.Forms.Label();
             this.Control.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -80,6 +88,11 @@
             this.panel5.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttongreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonred)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // Control
@@ -284,8 +297,8 @@
             // 
             // trackbar
             // 
-            this.trackbar.LargeChange = 1;
             resources.ApplyResources(this.trackbar, "trackbar");
+            this.trackbar.LargeChange = 1;
             this.trackbar.Maximum = 18;
             this.trackbar.Name = "trackbar";
             this.trackbar.Scroll += new System.EventHandler(this.trackbar_Scroll);
@@ -331,25 +344,36 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel6.Controls.Add(this.buttonblue);
+            this.panel6.Controls.Add(this.buttongreen);
+            this.panel6.Controls.Add(this.buttonred);
             this.panel6.Controls.Add(this.led_blue);
             this.panel6.Controls.Add(this.led_green);
             this.panel6.Controls.Add(this.led_red);
+            this.panel6.Controls.Add(this.groupBox6);
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
-            // led_red
+            // buttonblue
             // 
-            resources.ApplyResources(this.led_red, "led_red");
-            this.led_red.Name = "led_red";
-            this.led_red.UseVisualStyleBackColor = true;
-            this.led_red.CheckedChanged += new System.EventHandler(this.led_red_CheckedChanged);
+            this.buttonblue.Image = global::tank_interface.Properties.Resources.Circle_34541;
+            resources.ApplyResources(this.buttonblue, "buttonblue");
+            this.buttonblue.Name = "buttonblue";
+            this.buttonblue.TabStop = false;
             // 
-            // led_green
+            // buttongreen
             // 
-            resources.ApplyResources(this.led_green, "led_green");
-            this.led_green.Name = "led_green";
-            this.led_green.UseVisualStyleBackColor = true;
-            this.led_green.CheckedChanged += new System.EventHandler(this.led_green_CheckedChanged);
+            this.buttongreen.Image = global::tank_interface.Properties.Resources.buttongreen;
+            resources.ApplyResources(this.buttongreen, "buttongreen");
+            this.buttongreen.Name = "buttongreen";
+            this.buttongreen.TabStop = false;
+            // 
+            // buttonred
+            // 
+            this.buttonred.Image = global::tank_interface.Properties.Resources.redledon;
+            resources.ApplyResources(this.buttonred, "buttonred");
+            this.buttonred.Name = "buttonred";
+            this.buttonred.TabStop = false;
             // 
             // led_blue
             // 
@@ -358,12 +382,60 @@
             this.led_blue.UseVisualStyleBackColor = true;
             this.led_blue.CheckedChanged += new System.EventHandler(this.led_blue_CheckedChanged);
             // 
+            // led_green
+            // 
+            resources.ApplyResources(this.led_green, "led_green");
+            this.led_green.Name = "led_green";
+            this.led_green.UseVisualStyleBackColor = true;
+            this.led_green.CheckedChanged += new System.EventHandler(this.led_green_CheckedChanged);
+            // 
+            // led_red
+            // 
+            resources.ApplyResources(this.led_red, "led_red");
+            this.led_red.Name = "led_red";
+            this.led_red.UseVisualStyleBackColor = true;
+            this.led_red.CheckedChanged += new System.EventHandler(this.led_red_CheckedChanged);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label7);
+            resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.TabStop = false;
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel7.Controls.Add(this.linkLabel1);
+            this.panel7.Controls.Add(this.label8);
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.Name = "panel7";
+            // 
+            // linkLabel1
+            // 
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.LinkColor = System.Drawing.Color.WhiteSmoke;
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -394,6 +466,13 @@
             this.groupBox5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttongreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonred)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -436,6 +515,14 @@
         private System.Windows.Forms.CheckBox led_green;
         private System.Windows.Forms.CheckBox led_red;
         private System.Windows.Forms.CheckBox led_blue;
+        private System.Windows.Forms.PictureBox buttonred;
+        private System.Windows.Forms.PictureBox buttonblue;
+        private System.Windows.Forms.PictureBox buttongreen;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

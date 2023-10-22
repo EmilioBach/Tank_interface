@@ -121,14 +121,23 @@
   <data name="tank_reference" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tank_reference.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shot1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shot1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redledon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redledon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttongreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttongreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="night_mode" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\night_mode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_d" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button_d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="redledoff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redledoff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_a_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_a_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_d_good" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_d_good.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,13 +145,16 @@
   <data name="button_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shot1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shot1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_a_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button_a_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Circle_34541" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Circle_34541.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
