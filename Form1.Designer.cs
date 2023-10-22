@@ -51,9 +51,10 @@
             this.addconfiguration = new System.Windows.Forms.ProgressBar();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.fire_2 = new System.Windows.Forms.Button();
             this.show_seconds = new System.Windows.Forms.Label();
+            this.fire_2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.Control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.night_mode)).BeginInit();
             this.panel1.SuspendLayout();
@@ -231,11 +232,17 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.show_seconds);
             this.groupBox3.Controls.Add(this.fire_2);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
+            // 
+            // show_seconds
+            // 
+            resources.ApplyResources(this.show_seconds, "show_seconds");
+            this.show_seconds.Name = "show_seconds";
             // 
             // fire_2
             // 
@@ -245,15 +252,13 @@
             this.fire_2.UseVisualStyleBackColor = false;
             this.fire_2.Click += new System.EventHandler(this.fire_2_Click);
             // 
-            // show_seconds
+            // button1
             // 
-            resources.ApplyResources(this.show_seconds, "show_seconds");
-            this.show_seconds.Name = "show_seconds";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -312,6 +317,7 @@
         private System.Windows.Forms.Label show_seconds;
         private System.Windows.Forms.Button fire_2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

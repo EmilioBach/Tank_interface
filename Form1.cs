@@ -182,23 +182,40 @@ namespace tank_interface
             }
         }
         //machine gun
-        int milisegundos = 5;
+        int duration = 5;
         private void fire_2_Click(object sender, EventArgs e)
         {
             arduino_interface.WriteLine("$Fire_2"); //new command!
-            show_seconds.Text = milisegundos.ToString();
+
+            timer1.Tick += new EventHandler(count_down);
+            timer1.Interval = 1000;
             timer1.Start();
 
         }
 
-        //temporizador
-        private void timer1_Tick(object sender, EventArgs e)
+        private void count_down(object sender, EventArgs e)
         {
-            milisegundos -= 1;
-            if (show_seconds.Text == "0")
+            if (duration == 0)
             {
                 timer1.Stop();
+                fire_2.Enabled = false;
+                arduino_interface.WriteLine("$Fire_2_off");
+
+            }
+            else if (duration > 0)
+            {
+                duration--;
+                show_seconds.Text = duration.ToString();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            duration = 6;
+            timer1.Start();
+            arduino_interface.WriteLine("$Fire_2");
+        }
+
+        //temporizador
     }
 }
