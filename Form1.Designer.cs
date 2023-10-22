@@ -81,11 +81,11 @@
             this.button_d.Name = "button_d";
             this.button_d.Size = new System.Drawing.Size(75, 74);
             this.button_d.TabIndex = 1;
-<<<<<<< HEAD
+
             this.button_d.Text = "B";
-=======
+
             this.button_d.Text = "D";
->>>>>>> add keyboard controlsnew change
+            
             this.button_d.UseVisualStyleBackColor = false;
             this.button_d.Click += new System.EventHandler(this.Button_d_Click);
             // 
@@ -307,10 +307,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
->>>>>>> add keyboard controlsnew change
+//>>>>>>> add keyboard controlsnew change
             this.Control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.night_mode)).EndInit();
             this.panel1.ResumeLayout(false);
