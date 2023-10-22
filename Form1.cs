@@ -35,6 +35,7 @@ namespace tank_interface
 
         private void Button_d_Click(object sender, EventArgs e)
         {
+            //hello!
             try
             {
                 arduino_interface.WriteLine("$Go_2");
