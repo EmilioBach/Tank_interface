@@ -51,6 +51,7 @@ namespace tank_interface
         //fire
         private void Fire_pen_Click(object sender, EventArgs e)
         {
+            arduino_interface.WriteLine("$Fire");
             fire_pen.BackColor = Color.DarkGray;
             MessageBox.Show("FIRE!");
             label1.Text = "0";
