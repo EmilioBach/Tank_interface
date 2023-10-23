@@ -1,11 +1,16 @@
+#include <tanque_disp.h>
+#include <tanque.h>
+
 String inputString = "";    //guardar comandos
 bool stringComplete = false;//si se completa un comando...
+
+tanque tank;
+tanque_disp tankd;
 
 void setup() 
 {
   Serial.begin(9600);
-  pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, LOW);
+  tanque.info(13, 12, 11, 10);
 }
 
 void loop() 
@@ -20,12 +25,29 @@ void loop()
     //oruga 1
     if(inputString.equals("$Go_1"))
     {
-      digitalWrite(LED_BUILTIN, HIGH);
+      tanque.derecha();
     }
     //oruga 2
-    else if(inputString.equals("$Go_2"))
+    if(inputString.equals("$Go_2"))
     {
-      digitalWrite(LED_BUILTIN, LOW);
+      tanque.izquierda();
+    }
+    //torreta
+    if(inputString.equals("$"){
+      
+    } //revisar
+    if(inputString.equals("$Fire_2")){
+      tankd.elastico();
+    }
+    if(inputString.equals("$Fire_2_off")){
+      tankd.n_elastico();
+    }
+    if(inputString.equals("$Fire")){
+      tankd.lapiz();
+      delay(1000);
+    }
+    if(inputString.equals($Fire_off)){
+      tankd.n_lapiz();
     }
 
     //borrar string
